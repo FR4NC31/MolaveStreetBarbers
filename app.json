@@ -1,0 +1,84 @@
+{
+  "expo": {
+    "name": "MLV St",
+    "slug": "MolaveStreetBarbers",
+    "scheme": "com.fr4nc.mlvst",
+    "version": "1.6.04",
+    "orientation": "portrait",
+    "icon": "./assets/img/Favicon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/img/Mobile Logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "package": "com.fr4nc.mlvst",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/img/Favicon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "POST_NOTIFICATIONS"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [{ "scheme": "https", "host": "molavestreetbarbers.com" }],
+          "category": ["BROWSABLE", "DEFAULT"]
+        },
+        {
+          "action": "VIEW",
+          "data": [{ "scheme": "molavestreetbarbers" }],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "platforms": ["ios", "android", "web"],
+    "web": {
+      "favicon": "./assets/img/Favicon.png"
+    },
+    "notification": {
+      "icon": "./assets/icon.png",
+      "color": "#ffffff",
+      "androidMode": "default",
+      "androidCollapsedTitle": "MolaveStreetBarbers",
+      "iosDisplayInForeground": true
+    },
+    "plugins": [
+      "expo-web-browser",
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#ffffff",
+          "sounds": [],
+          "androidMode": "default",
+          "androidCollapsedTitle": "#{unread_notifications} new notifications"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "expo-video"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "94ce3340-6d34-42b1-853e-0db28ff972be"
+      }
+    },
+    "owner": "fr4nc"
+  }
+}
